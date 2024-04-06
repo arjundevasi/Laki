@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".ViewCommentPostListActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Comments"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/comment_title_textview_view_post_comment_list_activity"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/linear_layout_view_post_comment_list_activity"
+        android:layout_below="@+id/comment_title_textview_view_post_comment_list_activity"
+        android:id="@+id/recycler_view_view_post_comment_list_activity"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_below="@id/recycler_view_view_post_comment_list_activity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_view_post_comment_list_activity"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/edittext_view_post_comment_list_activity"
+            android:layout_width="0dp"
+            android:paddingStart="5dp"
+            android:layout_margin="20dp"
+            android:hint="write comment"
+            android:background="@drawable/comment_background"
+            android:layout_height="48dp"/>
+        <ImageView
+            android:id="@+id/send_comment_button_view_post_comment_list_activity"
+            android:src="@drawable/send"
+            android:layout_margin="20dp"
+            android:layout_width="30dp"
+            android:layout_gravity="center"
+            android:layout_height="30dp"/>
+        <ProgressBar
+            android:id="@+id/progressbar_view_post_comment_list_activity"
+            android:layout_width="50dp"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background_color"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewPendingProposalActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:visibility="visible"
+        android:id="@+id/appbarlayout_view_proposal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_view_pending_proposal_activity"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbar_color"
+            android:theme="?attr/actionBarTheme"
+            app:navigationIcon="?android:attr/homeAsUpIndicator">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="@color/line_color"/>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view_view_pending_proposal_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardElevation="0dp"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/opposite_fullname_profile_image_layout_view_proposal_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/profile_imageview_view_proposal_activity"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="15dp" />
+
+                <TextView
+                    android:id="@+id/fullname_textview_view_proposal_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_size"
+            android:background="@color/line_color"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_view_proposal_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="true"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbar_view_proposal_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="25dp"
+        android:visibility="visible" />
+</LinearLayout>

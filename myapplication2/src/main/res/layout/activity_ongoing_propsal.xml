@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background_color"
+    android:layout_height="match_parent"
+    tools:context=".OngoingProposalListActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout_ongoing_proposal_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_ongoing_proposal_list_activity"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbar_color"
+            android:theme="?attr/actionBarTheme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_below="@id/appbarlayout_ongoing_proposal_list"
+        android:id="@+id/line_ongoing_proposal_activity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="@color/line_color"/>
+    <androidx.cardview.widget.CardView
+        app:cardElevation="0dp"
+        android:layout_below="@+id/line_ongoing_proposal_activity"
+        android:id="@+id/cardview_recyler_ongoing_proposal_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerview_ongoing_proposal_activity"
+        android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar_ongoing_proposal_list_activity"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:text="No proposal yet."
+        android:layout_width="wrap_content"
+        android:id="@+id/no_data_textview_ongoing_proposal_list_activity"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

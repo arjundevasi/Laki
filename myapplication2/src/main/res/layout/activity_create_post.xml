@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".CreatePostActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbarlayout_createpost">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="@color/toolbar_color"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/create_post_toolbar"
+            android:theme="?attr/actionBarTheme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Create Post"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_below="@+id/appbarlayout_createpost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/username_image_layout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/profile_imageview_create_post_activity"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/profile_image_bg"
+                    android:src="@drawable/homejoin"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/username_textview_create_post_activity"
+                    android:textSize="20sp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Username"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <EditText
+                android:layout_below="@+id/username_image_layout"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:hint="write here..."
+                android:layout_margin="20dp"
+                android:background="@null"
+                android:gravity="top"
+                android:enabled="true"
+                android:id="@+id/edittext_create_post_activity"
+                android:layout_width="match_parent"
+                android:layout_height="350dp" />
+
+            <HorizontalScrollView
+                android:scrollbars="none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/imageview1_layout_create_post_activity"
+                        android:layout_margin="10dp"
+                        android:visibility="gone"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp">
+
+                        <ImageView
+                            android:id="@+id/cancel_imageview1"
+                            android:src="@drawable/cancel"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+
+                        <ImageView
+                            android:layout_margin="20dp"
+                            android:id="@+id/imageview1"
+                            android:scaleType="centerCrop"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/imageview2_layout_create_post_activity"
+                        android:layout_margin="10dp"
+                        android:visibility="gone"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp">
+
+                        <ImageView
+                            android:id="@+id/cancel_imageview2"
+                            android:src="@drawable/cancel"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+
+                        <ImageView
+                            android:layout_margin="20dp"
+                            android:id="@+id/imageview2"
+                            android:scaleType="centerCrop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/imageview3_layout_create_post_activity"
+                        android:layout_margin="10dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp">
+
+                        <ImageView
+                            android:id="@+id/cancel_imageview3"
+                            android:src="@drawable/cancel"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+
+                        <ImageView
+                            android:layout_margin="20dp"
+                            android:id="@+id/imageview3"
+                            android:scaleType="centerCrop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/add_image_layout_create_post_activity"
+                        android:layout_margin="10dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp">
+
+                        <ImageView
+                            android:id="@+id/add_image_imageview_createpost_activity"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/gallery_icon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp" />
+
+                        <TextView
+                            android:layout_centerInParent="true"
+                            android:layout_below="@+id/add_image_imageview_createpost_activity"
+                            android:text="Add Images"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/post_button_create_post_activity"
+                android:text="POST"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

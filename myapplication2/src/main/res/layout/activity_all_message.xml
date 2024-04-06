@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".AllMessageActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color"
+        android:id="@+id/appbarlayout_all_message_activity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar_all_message_activity"
+            android:theme="@style/Theme.MyApplication2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:id="@+id/line_all_message_actvity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:layout_below="@+id/appbarlayout_all_message_activity"
+        android:background="@color/line_color"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/line_all_message_actvity"
+        android:layout_width="match_parent"
+        android:id="@+id/recyler_view_allmessages"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar_all_message_activity"/>
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:text="No messages yet."
+        android:layout_width="wrap_content"
+        android:id="@+id/no_data_textview_all_message_activity"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

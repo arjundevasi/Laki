@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".MyProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/myprofile_activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbar_color"
+            android:theme="?attr/actionBarTheme">
+
+            <TextView
+                android:id="@+id/toolbar_textview_my_profile_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="@color/line_color" />
+
+    <ProgressBar
+        android:visibility="visible"
+        android:layout_margin="50dp"
+        android:layout_gravity="center"
+        android:id="@+id/myprofile_progressbar"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/myprofile_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/myprofile_activity_profile_imageview"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="20dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/profile_image_bg"
+                android:clipToOutline="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/homeimage1" />
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/icon_contracts" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/myprofile_contract_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="(123 contarcts)"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/rating_icon_my_profile" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/myprofile_rating_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="4.8 (123)"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/myprofile_fullname_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="FOO BAR"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/myprofile_category_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Professional Plumber"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/myprofile_services_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Website managmemnt"
+                android:textColor="@color/black" />
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/location" />
+
+                <TextView
+                    android:id="@+id/myprofile_location_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="Hyderabad"
+                    android:textColor="@color/myprofile_location_icon_color" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/calender" />
+
+                <TextView
+                    android:id="@+id/myprofile_year_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="joined july 1978"
+                    android:textColor="@color/myprofile_location_icon_color" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:visibility="gone"
+            android:layout_margin="20dp"
+            android:id="@+id/edit_profile_button_my_profile_activity"/>
+
+        <LinearLayout
+            android:id="@+id/proposal_message_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/hire_button_my_profile_activty"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_margin="15dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="Hire" />
+
+                <Button
+                    android:id="@+id/message_button_my_profile_activity"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/grey_button_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:layout_margin="15dp"
+                    android:textColor="@color/black"
+                    android:text="Message" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="@color/line_color" />
+</LinearLayout>

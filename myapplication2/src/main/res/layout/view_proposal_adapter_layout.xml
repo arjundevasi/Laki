@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/own_proposal_cardview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:text="Budget:"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/own_proposal_budget_textview_view_proposal_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:text="Title:"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/own_proposal_title_textview_view_proposal_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/proposal_details_text_size"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:text="Start Date:"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/own_proposal_start_date_textview_view_proposal_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/proposal_details_text_size"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:text="Details:"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/own_proposal_details_textview_view_proposal_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/proposal_details_text_size"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/own_proposal_accept_button_view_proposal_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/accept_button_color"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Accept" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/own_proposal_edit_button_proposal_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/edit_button_color"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Edit Offer" />
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/own_proposal_cancel_button_proposal_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/cancel_button_color"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Cancel" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/opposite_proposal_cardview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="30dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:text="Budget:"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+
+                android:id="@+id/opposite_proposal_budget_textview_view_proposal_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:text="Title:"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/opposite_proposal_title_textview_view_proposal_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/proposal_details_text_size"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:text="Start Date:"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/opposite_proposal_start_date_textview_view_proposal_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/proposal_details_text_size"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/line_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:text="Details:"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/opposite_proposal_details_textview_view_proposal_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/proposal_details_text_size"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/opposite_proposal_accept_button_view_proposal_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/accept_button_color"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Accept" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/opposite_proposal_edit_button_proposal_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/edit_button_color"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Edit Offer" />
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/opposite_proposal_cancel_button_proposal_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:backgroundTint="@color/cancel_button_color"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        android:id="@+id/proposal_accepted_textview_proposal_activity"
+        android:text="This proposal has been accepted"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

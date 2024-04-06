@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".NotificationFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbarlayout_bid">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="@color/toolbar_color"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/main_toolbar"
+            android:theme="?attr/actionBarTheme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Notifications"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:id="@+id/recyler_view"
+        android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/progress_bar_notification_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
